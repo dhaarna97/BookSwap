@@ -23,7 +23,6 @@ The frontend will be available at `http://localhost:5173`
 
 Make sure your backend server is running on `http://localhost:5000` or update the API_BASE_URL in `src/services/api.js` if your backend runs on a different port.
 
-## Features Implemented
 
 ### Authentication
 - ✅ User Login
