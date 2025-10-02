@@ -1,0 +1,268 @@
+.requests-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: calc(100vh - 4rem); /* Full height minus header */
+  display: flex;
+  flex-direction: column;
+}
+
+.requests-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.requests-header h1 {
+  font-size: 2rem;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.requests-header p {
+  color: #6b7280;
+  font-size: 1.1rem;
+}
+
+.requests-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 1; /* Take remaining space */
+}
+
+.no-requests {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 3rem;
+  color: #6b7280;
+  font-size: 1.1rem;
+  flex: 1; /* Take full remaining height */
+  min-height: 300px;
+}
+
+.request-card {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.5rem;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.request-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.request-image {
+  width: 80px;
+  height: 120px;
+  overflow: hidden;
+  border-radius: 0.375rem;
+  flex-shrink: 0;
+}
+
+.request-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.request-info {
+  flex: 1;
+}
+
+.request-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 0.25rem;
+}
+
+.request-author {
+  color: #6b7280;
+  margin-bottom: 0.75rem;
+}
+
+.requester-info {
+  margin-bottom: 0.75rem;
+}
+
+.requester-info p {
+  color: #374151;
+  font-size: 0.875rem;
+}
+
+.request-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.condition {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.condition.new {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.condition.like-new {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.condition.very-good {
+  background-color: #e0e7ff;
+  color: #3730a3;
+}
+
+.condition.good {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.condition.acceptable {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status-pending {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-accepted {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-declined {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.request-date {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.request-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 120px;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.accept-btn,
+.decline-btn,
+.cancel-request-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.875rem;
+}
+
+.accept-btn {
+  background-color: #10b981;
+  color: white;
+}
+
+.accept-btn:hover {
+  background-color: #059669;
+}
+
+.decline-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.decline-btn:hover {
+  background-color: #dc2626;
+}
+
+.cancel-request-btn {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.cancel-request-btn:hover {
+  background-color: #d97706;
+}
+
+.success-message,
+.declined-message {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.success-message {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.declined-message {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+@media (max-width: 768px) {
+  .requests-container {
+    padding: 1rem;
+  }
+  
+  .request-card {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  .request-image {
+    width: 60px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  
+  .request-meta {
+    justify-content: center;
+  }
+  
+  .action-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+  
+  .request-actions {
+    min-width: auto;
+  }
+}

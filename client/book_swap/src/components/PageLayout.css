@@ -1,0 +1,18 @@
+.page-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Ensure containers take full height */
+.page-main > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
