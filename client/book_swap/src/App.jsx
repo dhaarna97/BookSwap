@@ -8,6 +8,7 @@ import MyBooks from './pages/MyBooks'
 import AddBook from './pages/AddBook'
 import MyRequests from './pages/MyRequests'
 import ReceivedRequests from './pages/ReceivedRequests'
+import NotFound from './pages/NotFound'
 import './App.css'
 
 // Protected Route Component
@@ -64,6 +65,7 @@ function App() {
               </ProtectedRoute>
             } />
             <Route path="/" element={<Navigate to="/dashboard" />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
